@@ -1,23 +1,7 @@
 from pydantic import BaseModel, Field, validator, EmailStr
 from typing import List, Optional
 
-class ActivityRequestSchema(BaseModel):
-    eventname: str
-    category: str
-    eventbigimg_url: str
-    eventpicone_url: str
-    eventpictwo_url: str
-    eventpicthree_url: str
-    eventpicfour_url: str
-    eventpicfive_url: str
-    eventintro_first: str
-    eventintro_second: str
 
-class ActivityResponseSchema(ActivityRequestSchema):
-    id: int
-    class Config:
-        orm_mode = True
-        
 class ProductRequestSchema(BaseModel):
     category: str
     name: str

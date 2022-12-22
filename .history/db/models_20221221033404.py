@@ -38,19 +38,15 @@ class DbUser(Base):
     is_admin = Column(Boolean, default=False, nullable=True)
     created_products = relationship('DbProduct', back_populates='owner')
     user_detail = relationship('DbUserDetail', back_populates="owner_info", uselist=False)
-    
 
 class DbActivity(Base):
     __tablename__ = 'activity'
     id = Column(Integer, primary_key=True, index=True)
-    category = Column(String(30), nullable=False)
-    eventname = Column(String(30), nullable=False)
-    eventbigimg_url = Column(String(255), nullable=False)
-    eventpicone_url = Column(String(255), nullable=False)
-    eventpictwo_url = Column(String(255), nullable=False)
-    eventpicthree_url = Column(String(255), nullable=False)
-    eventpicfour_url = Column(String(255), nullable=False)
-    eventpicfive_url = Column(String(255), nullable=False)
-    eventintro_first = Column(String(255), nullable=False)
-    eventintro_second = Column(String(255), nullable=False)
-    
+    Limg_url = Column(String(255), nullable=False)
+    sone_img_url = Column(String(255), nullable=False)
+    stwo_img_url = Column(String(255), nullable=False)
+    sthree_img_url = Column(String(255), nullable=False)
+    sfour_img_url = Column(String(255), nullable=False)
+    sfive_img_url = Column(String(255), nullable=False)
+    intro_first = Column(String(255), nullable=False)
+    intro_second = Column(String(255), nullable=False)

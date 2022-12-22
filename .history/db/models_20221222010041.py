@@ -38,7 +38,6 @@ class DbUser(Base):
     is_admin = Column(Boolean, default=False, nullable=True)
     created_products = relationship('DbProduct', back_populates='owner')
     user_detail = relationship('DbUserDetail', back_populates="owner_info", uselist=False)
-    
 
 class DbActivity(Base):
     __tablename__ = 'activity'
@@ -53,4 +52,3 @@ class DbActivity(Base):
     eventpicfive_url = Column(String(255), nullable=False)
     eventintro_first = Column(String(255), nullable=False)
     eventintro_second = Column(String(255), nullable=False)
-    
