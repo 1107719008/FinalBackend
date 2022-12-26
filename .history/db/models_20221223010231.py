@@ -47,14 +47,12 @@ class DbActivity(Base):
     eventname = Column(String(30), nullable=False)
     eventbigimg_url = Column(String(255), nullable=False)
     eventpicone_url = Column(String(255), nullable=False)
-    eventpiconeone_url = Column(String(255), nullable=False)
     eventpictwo_url = Column(String(255), nullable=False)
     eventpicthree_url = Column(String(255), nullable=False)
     eventpicfour_url = Column(String(255), nullable=False)
     eventpicfive_url = Column(String(255), nullable=False)
     eventintro_first = Column(String(255), nullable=False)
     eventintro_second = Column(String(255), nullable=False)
-    category_pic = Column(String(255), nullable=False)
 
 class DbRent(Base):
     __tablename__ = 'rent'
@@ -66,7 +64,6 @@ class DbRent(Base):
     rentpicone_url = Column(String(255), nullable=False)
     rentpictwo_url = Column(String(255), nullable=False)
     rentpicthree_url = Column(String(255), nullable=False)
-    rentpicfour_url = Column(String(255), nullable=False)
     rentintro = Column(String(255), nullable=False)
     teachintro = Column(String(255), nullable=False)
     area = Column(String(255), nullable=False)

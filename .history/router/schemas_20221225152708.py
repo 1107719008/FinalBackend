@@ -9,7 +9,6 @@ class RentRequestSchema(BaseModel):
     rentpicone_url: str
     rentpictwo_url: str
     rentpicthree_url: str
-    rentpicfour_url: str
     rentintro: str
     teachintro: str
     area: str
@@ -25,14 +24,12 @@ class ActivityRequestSchema(BaseModel):
     category: str
     eventbigimg_url: str
     eventpicone_url: str
-    eventpiconeone_url: str
     eventpictwo_url: str
     eventpicthree_url: str
     eventpicfour_url: str
     eventpicfive_url: str
     eventintro_first: str
     eventintro_second: str
-    category_pic : str
 
 class ActivityResponseSchema(ActivityRequestSchema):
     id: int
@@ -125,12 +122,7 @@ class UserSignInResponseSchema(BaseModel):
     #address: str
     #tel: str
 
-class ActivityResponseWithUserSchema(ActivityRequestSchema):
-    id: int
-    #owner_id: int
-    #owner: UserResponseSchema
-    class Config:
-        orm_mode = True
+
 class ProductResponseWithUserSchema(ProductRequestSchema):
     id: int
     owner_id: int

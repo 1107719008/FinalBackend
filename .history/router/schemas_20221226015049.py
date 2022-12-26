@@ -25,14 +25,12 @@ class ActivityRequestSchema(BaseModel):
     category: str
     eventbigimg_url: str
     eventpicone_url: str
-    eventpiconeone_url: str
     eventpictwo_url: str
     eventpicthree_url: str
     eventpicfour_url: str
     eventpicfive_url: str
     eventintro_first: str
     eventintro_second: str
-    category_pic : str
 
 class ActivityResponseSchema(ActivityRequestSchema):
     id: int

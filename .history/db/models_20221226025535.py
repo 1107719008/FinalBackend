@@ -47,7 +47,6 @@ class DbActivity(Base):
     eventname = Column(String(30), nullable=False)
     eventbigimg_url = Column(String(255), nullable=False)
     eventpicone_url = Column(String(255), nullable=False)
-    eventpiconeone_url = Column(String(255), nullable=False)
     eventpictwo_url = Column(String(255), nullable=False)
     eventpicthree_url = Column(String(255), nullable=False)
     eventpicfour_url = Column(String(255), nullable=False)

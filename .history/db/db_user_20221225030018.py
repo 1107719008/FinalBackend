@@ -61,7 +61,6 @@ def signin(db: Session, request: SignInRequestSchema):
         'access_token': access_token,
         'user_id': user.id,
         'username': user.username,
-        'email': user.email,
         #'tel': user_detail.tel,
         #'address': user_detail.address
     }

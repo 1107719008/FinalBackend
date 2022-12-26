@@ -25,7 +25,6 @@ class ActivityRequestSchema(BaseModel):
     category: str
     eventbigimg_url: str
     eventpicone_url: str
-    eventpiconeone_url: str
     eventpictwo_url: str
     eventpicthree_url: str
     eventpicfour_url: str

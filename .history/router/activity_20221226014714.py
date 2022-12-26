@@ -29,6 +29,6 @@ def get_all_activities(db: Session = Depends(get_db)):
 def get_activity_by_category(category: str, db: Session = Depends(get_db)):
     return db_activity.get_activity_by_category(category=category, db=db)
 
-@router.get('/id/{activity_id}', response_model=ActivityResponseSchema)
-def get_activity_by_id(activity_id: int, db: Session = Depends(get_db)):
-    return db_activity.get_activity_by_id(activity_id=activity_id, db=db)
+@router.get('/id/{product_id}', response_model=ActivityResponseWithUserSchema)
+def get_product_by_id(product_id: int, db: Session = Depends(get_db)):
+    return db_activity.get_product_by_id(product_id=product_id, db=db)

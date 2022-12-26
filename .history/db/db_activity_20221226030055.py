@@ -20,7 +20,6 @@ def db_feed(db: Session):
         eventpicfive_url=activity["eventpicfive_url"],
         eventintro_first=activity["eventintro_first"],
         eventintro_second=activity["eventintro_second"],
-        category_pic=activity["category_pic"]
         #owner_id=activity["owner_id"]
     ) for activity in activities]
     db.query(DbActivity).delete()

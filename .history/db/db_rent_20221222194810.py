@@ -1,8 +1,8 @@
 from fastapi import HTTPException, status
-from router.schemas import ActivityRequestSchema
+#from router.schemas import ActivityRequestSchema
 from sqlalchemy import func
 from sqlalchemy.orm.session import Session
-from .activities_feed import activities
+#from .activities_feed import activities
 import time
 from db.models import DbActivity
 
@@ -13,14 +13,12 @@ def db_feed(db: Session):
         category=activity["category"],
         eventbigimg_url=activity["eventbigimg_url"],
         eventpicone_url=activity["eventpicone_url"],
-        eventpiconeone_url=activity["eventpiconeone_url"],
         eventpictwo_url=activity["eventpictwo_url"],
         eventpicthree_url=activity["eventpicthree_url"],
         eventpicfour_url=activity["eventpicfour_url"],
         eventpicfive_url=activity["eventpicfive_url"],
         eventintro_first=activity["eventintro_first"],
         eventintro_second=activity["eventintro_second"],
-        category_pic=activity["category_pic"]
         #owner_id=activity["owner_id"]
     ) for activity in activities]
     db.query(DbActivity).delete()
@@ -36,14 +34,12 @@ def create(db: Session, request: ActivityRequestSchema) -> DbActivity:
         category=request.category,
         eventbigimg_url=request.eventbigimg_url,
         eventpicone_url=request.eventpicone_url,
-        eventpiconeone_url=request.eventpiconeone_url,
         eventpictwo_url=request.eventpictwo_url,
         eventpicthree_url=request.eventpicthree_url,
         eventpicfour_url=request.eventpicfour_url,
         eventpicfive_url=request.eventpicfive_url,
         eventintro_first=request.eventintro_first,
         eventintro_second=request. eventintro_second,
-        category_pic=request.category_pic,
         #owner_id=request.owner_id
     )
     db.add(new_activity)

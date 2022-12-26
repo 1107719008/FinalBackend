@@ -50,10 +50,10 @@ def signin(db: Session, request: SignInRequestSchema):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail='Incorrect password')
 
-    #user_detail = db.query(DbUserDetail).filter(DbUserDetail.owner_id == user.id).first()
-    #if not user_detail:
-    #    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
-    #                        detail=f'User detail with id = {user.id} not found')
+    user_detail = db.query(DbUserDetail).filter(DbUserDetail.owner_id == user.id).first()
+    if not user_detail:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
+                            detail=f'User detail with id = {user.id} not found')
 
     access_token = create_access_token(data={'username': user.username})
 
@@ -61,9 +61,8 @@ def signin(db: Session, request: SignInRequestSchema):
         'access_token': access_token,
         'user_id': user.id,
         'username': user.username,
-        'email': user.email,
-        #'tel': user_detail.tel,
-        #'address': user_detail.address
+        'tel': user_detail.tel,
+        'address': user_detail.address
     }
 
 
