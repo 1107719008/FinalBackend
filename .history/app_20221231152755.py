@@ -8,7 +8,7 @@ from db.database import engine
 
 app = FastAPI(
     title="Final BeachBackend API",
-    description="This API was developed for final project Fast API",
+    description="This API was developed for teaching Fast API",
     version="0.0.1",
     terms_of_service="http://localhost:5000",
 )
